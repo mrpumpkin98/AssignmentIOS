@@ -42,8 +42,6 @@ const SignIn: React.FC<SignInProps> = (props) => {
         console.log(firebaseUser.displayName);
         const idToken: string = await firebaseUser.getIdToken();
         setRefreshToken(firebaseUser.refreshToken);
-
-        Alert.alert("Success", "로그인 성공");
       } else {
         Alert.alert("Error", "로그인 실패");
       }
